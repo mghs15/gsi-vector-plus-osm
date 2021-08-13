@@ -824,4 +824,39 @@
 {"metadata":{"layer-id":"layer-579","title":"その他","path":"注記-その他","added":1},"type":"symbol","source":"gsibv-vectortile-source-1-4-17","source-layer":"label","minzoom":17,"maxzoom":18,"filter":["all",["==","ftCode",100],["==","annoCtg",342]],"paint":{"text-color":"rgba(0,0,0,1)","text-halo-color":"rgba(255,255,255,1)","text-halo-width":1},"layout":{"text-size":20,"text-rotate":["case",["==",["get","arrng"],2],["*",["+",["to-number",["get","arrngAgl"]],90],-1],["*",["to-number",["get","arrngAgl"]],-1]],"text-anchor":["case",["==",["get","arrng"],2],["case",["==",["get","dspPos"],"LC"],"top","center"],["case",["==",["get","dspPos"],"LT"],"top-left",["==",["get","dspPos"],"CT"],"top",["==",["get","dspPos"],"RT"],"top-right",["==",["get","dspPos"],"LC"],"left",["==",["get","dspPos"],"CC"],"center",["==",["get","dspPos"],"RC"],"right",["==",["get","dspPos"],"LB"],"bottom-left",["==",["get","dspPos"],"CB"],"bottom",["==",["get","dspPos"],"RB"],"bottom-right","center"]],"text-pitch-alignment":"viewport","text-rotation-alignment":"viewport","icon-pitch-alignment":"auto","icon-rotation-alignment":"auto","text-offset":["case",["any",["==",["get","dspPos"],"LT"],["==",["get","dspPos"],"LC"],["==",["get","dspPos"],"LB"]],["literal",[0.5,0]],["any",["==",["get","dspPos"],"RT"],["==",["get","dspPos"],"RC"],["==",["get","dspPos"],"RB"]],["literal",[-0.5,0]],["any",["==",["get","dspPos"],"CT"]],["literal",[0,0.5]],["any",["==",["get","dspPos"],"CB"]],["literal",[0,-0.5]],["literal",[0,0]]],"text-field":["case",["!=",["get","arrng"],2],["get","knj"],["concat","",["get","knj"],""]],"text-font":["NotoSansCJKjp-Regular"],"symbol-placement":"point","icon-allow-overlap":true,"text-keep-upright":true,"text-allow-overlap":false,"symbol-z-order":"auto","text-max-width":100,"visibility":"visible"},"id":"gsibv-vectortile-layer-770"},
 {"metadata":{"layer-id":"layer-415","title":"電子基準点","path":"記号-電子基準点","added":1},"type":"symbol","source":"gsibv-vectortile-source-1-4-17","source-layer":"symbol","minzoom":11,"maxzoom":14,"filter":["all",["==","ftCode",7101]],"layout":{"icon-anchor":"center","icon-size":0.7,"icon-image":"電子基準点","icon-pitch-alignment":"viewport","icon-rotation-alignment":"viewport","text-font":["NotoSansCJKjp-Regular"],"symbol-placement":"point","icon-allow-overlap":true,"text-keep-upright":true,"text-allow-overlap":false,"symbol-z-order":"auto","text-max-width":100,"visibility":"visible"},"id":"gsibv-vectortile-layer-771"},
 {"metadata":{"layer-id":"layer-416","title":"電子基準点","path":"記号-電子基準点","added":1},"type":"symbol","source":"gsibv-vectortile-source-1-4-17","source-layer":"symbol","minzoom":14,"maxzoom":18,"filter":["all",["==","ftCode",7101],["==","gcpCodeFlag",0]],"layout":{"icon-size":{"stops":[[14,0.7],[17,1]]},"icon-anchor":"center","icon-image":"電子基準点","icon-pitch-alignment":"viewport","icon-rotation-alignment":"viewport","text-font":["NotoSansCJKjp-Regular"],"symbol-placement":"point","icon-allow-overlap":true,"text-keep-upright":true,"text-allow-overlap":false,"symbol-z-order":"auto","text-max-width":100,"visibility":"visible"},"id":"gsibv-vectortile-layer-772"},
-{"metadata":{"layer-id":"layer-417","title":"電子基準点(付)","path":"記号-電子基準点(付)","added":1},"type":"symbol","source":"gsibv-vectortile-source-1-4-17","source-layer":"symbol","minzoom":14,"maxzoom":18,"filter":["all",["==","ftCode",7101],["==","gcpCodeFlag",1]],"paint":{"text-color":"rgba(0,0,0,1)","text-halo-color":"rgba(255,255,255,1)","text-halo-width":1},"layout":{"text-size":9,"text-anchor":"left","text-offset":[0.8,-0.1],"text-pitch-alignment":"viewport","text-rotation-alignment":"viewport","text-allow-overlap":true,"text-field":["to-string",["/",["round",["*",["to-number",["get","alti"]],10]],10]],"text-font":["NotoSansCJKjp-Regular"],"symbol-placement":"point","icon-allow-overlap":true,"text-keep-upright":true,"symbol-z-order":"auto","text-max-width":100,"visibility":"visible"},"id":"gsibv-vectortile-layer-773"}  ],"id": "gsi-bv"}
+{"metadata":{"layer-id":"layer-417","title":"電子基準点(付)","path":"記号-電子基準点(付)","added":1},"type":"symbol","source":"gsibv-vectortile-source-1-4-17","source-layer":"symbol","minzoom":14,"maxzoom":18,"filter":["all",["==","ftCode",7101],["==","gcpCodeFlag",1]],"paint":{"text-color":"rgba(0,0,0,1)","text-halo-color":"rgba(255,255,255,1)","text-halo-width":1},"layout":{"text-size":9,"text-anchor":"left","text-offset":[0.8,-0.1],"text-pitch-alignment":"viewport","text-rotation-alignment":"viewport","text-allow-overlap":true,"text-field":["to-string",["/",["round",["*",["to-number",["get","alti"]],10]],10]],"text-font":["NotoSansCJKjp-Regular"],"symbol-placement":"point","icon-allow-overlap":true,"text-keep-upright":true,"symbol-z-order":"auto","text-max-width":100,"visibility":"visible"},"id":"gsibv-vectortile-layer-773"}  
+        {
+            "id": "poi-label",
+            "type": "symbol",
+            "source": "mapbox",
+            "source-layer": "poi_label",
+            "minzoom": 6,
+            "filter": ["<=", ["get", "filterrank"], 3],
+            "layout": {
+                "text-line-height": 1.1,
+                "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    10,
+                    11,
+                    18,
+                    13
+                ],
+                "icon-image": ["concat", ["get", "maki"], "-11"],
+                "text-max-angle": 38,
+                "text-font": ["NotoSansCJKjp-Regular"],
+                "text-padding": 2,
+                "text-offset": [0, 0.75],
+                "text-anchor": "top",
+                "text-field": ["coalesce", ["get", "name_ja"], ["get", "name"]],
+                "text-max-width": 8
+            },
+            "paint": {
+                "text-color": "rgba(134,83,15,1)",
+                "text-halo-color": "rgba(255,255,255,1)",
+                "text-halo-width": 2,
+                "text-halo-blur": 0.5
+            }
+
+],"id": "gsi-bv"}
